@@ -1,0 +1,37 @@
+version: "3"
+services:
+  pihole:
+    image: diginc/pi-hole:alpine
+    environment:
+      ServerIP: ${SERVER_IP}
+      WEBPASSWORD: "${WEBPASSWORD}"
+      IPv6: "False"
+      VIRTUAL_HOST: "${VIRTUAL_HOST}"
+    volumes:
+      - "./pihole/:/etc/pihole/"
+      - "./dnsmasq.d/:/etc/dnsmasq.d/"
+    networks:
+      picklerick:
+        ipv4_address: 10.9.8.1
+    ports:
+      - "89:80/tcp"
+    restart: always
+
+  shadowsocks:
+    image: vimagick/shadowsocks-libev
+    networks:
+      picklerick:
+        ipv4_address: 10.9.8.2
+    ports:
+      - "8388:8388/tcp"
+    environment:
+      PASSWORD: ${PROXY_PASSWORD}
+      DNS_ADDR: 10.9.8.1
+    restart: always
+  
+networks:
+    picklerick:
+        ipam:
+            driver: default
+            config:
+                - subnet: 10.9.0.0/16
