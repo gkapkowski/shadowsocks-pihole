@@ -1,11 +1,12 @@
 Shadowsocks Proxy + pi-Hole AdBlocking DNS docker-compose
 =========================================================
 
-'''
+```
 git clone https://github.com/pknw1/shadowsocks-pihole.git \ 
     && cd shadowsocks-pihole \
+    && vi .env \
     && docker-compose up -d
-'''
+```
 
 A complimentry setup for using Shadowsocks client to access your content remotely while utilizing pi-hole for DNS.
 
