@@ -4,12 +4,13 @@ Secure Ad Free Browsing docker-compose
 A complimentry setup for using Shadowsocks client to access your content remotely while utilizing pi-hole for DNS.
 
 #### What is/Why ShadowSocks?
-https://qz.com/1072701/meet-shadowsocks-the-underground-tool-that-chinas-coders-use-to-blast-through-the-great-firewall/
-https://www.vpnmentor.com/blog/shadowsocks-vs-vpns-everything-need-know/
+
+[How to beat the Great Firewall from CHina with Shadowsocks](https://qz.com/1072701/meet-shadowsocks-the-underground-tool-that-chinas-coders-use-to-blast-through-the-great-firewall/)
+[shadowsocks Vs VPN](https://www.vpnmentor.com/blog/shadowsocks-vs-vpns-everything-need-know/)
 
 #### What is/Why Pi-Hole?
-https://pi-hole.net/2017/05/12/seven-things-you-may-not-know-about-pi-hole/
-https://discourse.pi-hole.net/t/why-should-pi-hole-be-my-only-dns-server/3376
+[pi-hole facts](https://pi-hole.net/2017/05/12/seven-things-you-may-not-know-about-pi-hole/)
+[why use pi-hole](https://discourse.pi-hole.net/t/why-should-pi-hole-be-my-only-dns-server/3376)
 
 
 YOU ----> Local ShadowSocks Client
@@ -22,11 +23,11 @@ YOU ----> Local ShadowSocks Client
              get  <|> content
               from Internet
               
-### Net Result : 
+#### Net Result : 
     Your content delivered to your local machine over a secure encrypted connection 
     Your content has been stripped of Ad domains etc so its faster and smaller
     
-### And why is that good : 
+#### And why is that good : 
     Because you look at more porn than anyone and advertisers thought it was easier for you to block them.
     Sorry dude. 
     nah - ad's suck ass - snooping sucks ass - your mom.....
